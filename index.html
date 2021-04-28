@@ -12,24 +12,28 @@
     <style></style>
   </head>
   <body>
-    <h1>Updating HTML Content</h1>
+    <h1>how to forget</h1>
     <p id="paragraph-1">
-      This is a paragraph.
+    </p>
+    <p id="paragraph-2">
     </p>
     <button id="button-1">
       Button
     </button>
     <!-- script -->
     <script>
-      const lines = "this is how, or is this how, or maybe how, and any how".split(",");
+      const lines = "pull a blanket over head, sing alone in car, talk to strangers on the street, drink, smell a lemon,".split(",");
+      const linesTwo = "looking at the moon, in the eyes of a dog, in the bleeding lamplight,".split(",");
       const button = document.getElementById("button-1");
 
       function getRandomFromList(list) {
         return list[Math.floor(Math.random() * list.length)];
       }
       function changeText() {
-        paragraph = document.getElementById("paragraph-1");
+        const paragraph = document.getElementById("paragraph-1");
+        const paragraphTwo = document.getElementById("paragraph-2");
         paragraph.innerText = getRandomFromList(lines);
+        paragraphTwo.innerText = getRandomFromList(lines);
       }
       button.addEventListener("click", changeText);
     </script>
